@@ -1,7 +1,7 @@
 # StammerHelp AI 🎙️🧠
 
 ### AI-Powered Speech Disfluency Analyzer, Acoustic Diagnostic Engine & Interactive Biofeedback Therapy Assistant
-**Academic Level:** MCA Minor Project | **Author:** itzspgautam  
+**Academic Level:** MCA Minor Project | **Author:** itzspgautam  | Suraj Prakash Gautam
 **Status:** Tested, Verified & Fully Functional
 
 [![Frontend: Next.js](https://img.shields.io/badge/Frontend-Next.js%2016%20%7C%20React%2019-black?logo=next.js)](https://nextjs.org/)
@@ -489,26 +489,6 @@ python ml/train_sep28k.py \
 
 ---
 
-## 🎓 Viva & Project Defense Q&A Cheat Sheet
-
-Use these authoritative answers during academic evaluations, viva-voce examinations, and project demos:
-
-### Q1: "What is the core technical novelty of your project compared to standard speech tools?"
-> *"Standard commercial speech recognition systems (like standard Whisper or Google STT) use language-model smoothing to clean up speech, which removes stutters. StammerHelp AI uses a hybrid architecture: we tuned faster-whisper with Silero VAD to force verbatim transcription of every disfluent event, extract 95 acoustic features via Librosa across 1-second sliding windows, classify the audio with a Random Forest trained on Apple's 28,177 SEP-28k benchmark clips, isolate the exact stuck alphabet, and provide multi-sensory biofeedback through calm 0.82x audio modeling and a live webcam mirror."*
-
-### Q2: "How can you detect a silent block when there is literally no sound in the recording?"
-> *"A silent block has two distinct characteristics: first, it occurs mid-utterance between words without grammatical punctuation (no period or comma); second, the acoustic energy drops below -42 dB for between 0.50 and 2.50 seconds. This allows our system to mathematically separate an involuntary speech freeze from a natural pause at the end of a thought."*
-
-### Q3: "Why did you select a Random Forest classifier over a deep neural network?"
-> *"A 100-tree Random Forest is resilient to outliers in varied microphone environments, avoids overfitting on small acoustic slices, operates at sub-50ms CPU inference speeds without requiring an expensive GPU, and produces transparent class probability distributions that we present to the user as verifiable machine learning confidence evidence."*
-
-### Q4: "What role does the 95-dimensional acoustic feature vector play?"
-> *"The 95 features represent different physiological aspects of speech: 13 MFCC means capture vocal tract shape, 13 MFCC standard deviations identify articulatory freezing, 26 Delta MFCCs measure transition velocity, 26 Delta-Delta MFCCs capture muscle tremors, zero-crossing rate detects air friction, RMS energy detects volume drops, and pitch F0 tracks vocal cord tension."*
-
-### Q5: "How does the practice module help a user improve their fluency?"
-> *"When a struggle is identified on a letter like 'P', the system identifies it as a Plosive and prescribes Light Articulatory Contact. The user can listen to the practice sentence read aloud at a relaxed 0.82x clinical speed, turn on the webcam mirror to watch their facial muscles relax, and re-record the drill until their fluency score reaches 100%."*
-
----
 
 ## 📡 API Documentation
 
